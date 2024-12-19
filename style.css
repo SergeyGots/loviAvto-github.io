@@ -1,28 +1,9 @@
-@font-face {
-    font-family: 'Inter';
-    src: url("/fonts/Inter-Medium.woff2") format("woff2")
-
-}
-@font-face {
-    font-family: 'Inter-black';
-    src: url("/fonts/Inter-Black.otf")
-}
-@font-face {
-    font-family: 'Inter-medium';
-    src:
-    url("/fonts/Inter-Medium.woff2") format("woff2"),
-    url("/fonts/Inter-Medium.woff") format("woff");
-}
-@font-face {
-    font-family: 'Inter-bold';
-    src: 
-    url("/fonts/Inter-Bold.woff2") format("woff2"),
-    url("/fonts/Inter-Bold.woff") format("woff")
-}
-@font-face {
-    font-family: 'Inter-bold-semi';
-    src: url("/fonts/Inter-SemiBold.otf")
-}
+.dela-gothic-one-regular {
+    font-family: "Dela Gothic One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 hr{
     display: block;
@@ -109,7 +90,7 @@ main .containerInfo{
 }
 .number{
     font-size: 35px;
-    font-family: 'Inter';
+    font-family: "Dela Gothic One";
     font-weight: bold;
     
 }
@@ -126,12 +107,12 @@ header{
     text-align: center;
     padding: 12px 5px;
     font-size: 55px;
-    font-weight: bold;
+    font-weight:normal;
     text-decoration: none;
     
     border-radius: 16px;
     color: black;
-    font-family: 'Inter-black';
+    font-family: "Dela Gothic One";
     
     
 }
