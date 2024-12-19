@@ -367,6 +367,7 @@ img{
 }
 .box123{
     font-family: Inter-bold;
+    font-weight: black;
     font-size: 100px;
     color: white;
     -webkit-text-stroke-color: #22ADAA;
