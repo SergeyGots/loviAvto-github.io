@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛовиАвто</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/Layer 0 copy 1.png">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 10px 0;
+            padding: 0;
+            font-family: Inter;
+            
+        }
+        .form-container {
+            margin-bottom: 20px;
+        }
+        .modal {
+            display: none; /* Скрыто по умолчанию */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7); /* Затемненный фон */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .close-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #68EBE9;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            background-color: #00FFFB;
+        }
+        .floating-button {
+            position: fixed; /* Фиксированное позиционирование */
+            bottom: 10px; /* Отступ от низа */
+            right: 10px; /* Отступ от правого края */
+            background-color: #68EBE9; /* Цвет кнопки */
+            color: black; /* Цвет текста */
+            padding: 10px 10px; /* Отступы внутри кнопки */
+            border: none; /* Убираем рамку */
+            border-radius: 5px; /* Закругленные углы */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+            cursor: pointer; /* Указатель при наведении */
+            transition: background-color 0.3s; /* Плавный переход цвета */
+            display: none; /* Скрываем кнопку по умолчанию */
+            font-family: Inter-black;
+        }
+        .floating-button:hover {
+            background-color: #00FFFB; /* Цвет кнопки при наведении */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class= "container" align="center">
+            <nav class="menu">
+                <a href="#" class="loviavto">ЛовиАвто</a>
+            </nav>
+            <nav class="number">
+                <p>+7(899)355-43-43</p>
+                <p>+7(899)355-43-43</p>
+            </nav>
+            <nav>
+                <a><img src="img/Group 1.png"></a>
+            </nav>
+        </div>
+        
+    </header>
+    <main>
+        
+        <hr>
+        <div class="container">
+            <nav class="Text">
+                <p>Современная и динамично развивающаяся компания, предоставляющая услуги каршеринга</p>
+            </nav>
+            <nav class="box">
+                <p class="block-glav">Наши преимущества</p>
+                <p class="text1"><img class="imgSmart"src="/img/Smartphone.png">Удобство - аренда через приложение</p>
+            </nav>
+            <div align="right">
+            <nav class="box">
+                <p class="text1"><img src="img/Radio.png" class="imgSmart">Доступность - автопарк предоставлен в разных
+                    районах города
+                </p> 
+            </nav>
+            </div>
+            <nav class="box">
+                <p class="text1"><img src="img/Server.png" class="imgSmart2">
+                    Поддержка 24/7 - служба поддержки всегда на связи</p>
+            </nav>
+        </div>
+            <div class="container2">
+                <div align="center">
+                    <nav class="box2">
+                        <p class="text2"><img src="img/Shield.png" class="imgSmart">Безопасность и качество - автомобили проходят регулярное техническое обслуживание</p>
+                    </nav>
+                </div>
+                <button class="floating-button" id="floatingBtn">Вверх</button>
+                <script>
+                    const floatingBtn = document.getElementById('floatingBtn');
+            
+                    // Отслеживаем прокрутку страницы
+                    window.onscroll = () => {
+                        if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                            floatingBtn.style.display = "block"; // Показываем кнопку
+                        } else {
+                            floatingBtn.style.display = "none"; // Скрываем кнопку
+                        }
+                    };
+            
+                    // Добавляем обработчик события для прокрутки вверх
+                    floatingBtn.addEventListener('click', () => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth' // Плавная прокрутка
+                        });
+                    });
+                </script>
+                <div align="center">
+                    <nav class="menu2">
+                       <a href="info.html" class="loviavto2" id="textElement">Подробнее</a>
+                    </nav>
+                </div>
+                <script>
+                    const textElement = document.getElementById('textElement');
+            
+                    textElement.addEventListener('mouseenter', () => {
+                        textElement.style.backgroundColor = '#00FFFB'; // Цвет фона при наведении
+                    });
+            
+                    textElement.addEventListener('mouseleave', () => {
+                        textElement.style.backgroundColor = ''; // Сброс цвета фона
+                    });
+
+                    
+                </script>
+        </div>
+        <hr>
+        <div align="center">
+            <p class="block-glav2">КАК НАЧАТЬ ПОЕЗДКУ</p>
+        </div>
+        <div class="containerMain">
+            <div class="containerforleft">
+                <nav class="textleft">
+                    <p class="box123">1</p>
+                    <p>Скачать мобильное приложение и зарегистрироваться</p>
+                </nav>
+                <nav class="textleft">
+                    <p class="box123">3</p>
+                    <p>Найти ближайший автомобиль на карте и забронировать его</p>
+                </nav>
+                <nav class="textleft">
+                    <p class="box123">5</p>
+                    <p>По завершении поездки припарковаться в разрешенной зоне и завершить аренду в приложении</p>
+                </nav>
+            </div>
+            <div class="vertical"></div>
+            <div class="containerforright">
+                <nav class="textright">
+                    <p class="box123">2</p>
+                    <p>Подтвердить свою личность и водительское удостовирение</p>
+                </nav>
+                <nav class="textright">
+                    <p class="box123">4</p>
+                    <p>Подойти к автомобилю, открыть его через приложение и начать поездку</p>
+                </nav>
+            </div>
+        </div>
+        <div align="center" class="pading">
+            <p class="block-glav3">ОСТАВАЙТЕСЬ НА СВЯЗИ</p>
+            <p class="text3">ПОДПИШИТЕСЬ НА НАШИ НОВОСТИ И ОБНОВЛЕНИЯ</p>
+        </div>
+          <div class="form-container" align="center">
+            <label for="email" class="loviavto10">Введите вашу почту:</label>
+            <input type="email" id="email" required class="email10">
+            <button id="submitBtn" class="loviavto20">Отправить</button>
+        </div>
+    
+        <!-- Модальное окно -->
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <p>Спасибо, что подписались на наши обновления!</p>
+                <button class="close-btn" id="closeBtn">Закрыть</button>
+            </div>
+        </div>
+        <script>
+            const submitBtn = document.getElementById('submitBtn'); 
+            submitBtn.addEventListener('mouseenter', () => {
+                       submitBtn.style.backgroundColor = '#00FFFB'; // Цвет фона при наведении
+                    });
+            
+                    submitBtn.addEventListener('mouseleave', () => {
+                        submitBtn.style.backgroundColor = ''; // Сброс цвета фона
+                    });
+                    
+            const modal = document.getElementById('myModal');
+            const closeBtn = document.getElementById('closeBtn');
+
+            submitBtn.addEventListener('click', () => {
+                const emailInput = document.getElementById('email').value;
+                if (emailInput) {
+                    modal.style.display = 'flex'; // Показать модальное окно
+                } else {
+                    alert('Пожалуйста, введите корректный адрес электронной почты.');
+                }
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none'; // Скрыть модальное окно
+            });
+
+            // Закрытие модального окна при клике вне его
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+    
+        </script>
+        <hr>
+        <div class="containerInfo">
+            <div>
+                <p class="textinfo">СЛЕДИТЕ ЗА НАМИ В СОЦИАЛЬНЫХ СЕТЯХ</p>
+                <nav class="containerforimg">
+                    <a href="https://web.telegram.org/"><img src="img/telegram 2.png" class="mainimg"></a>
+                    <a href="https://vk.com/"><img src="img/vk 2.png" class="mainimg"></a>
+                    <a href="https://www.youtube.com/"><img src="img/youtube 2.png" class="mainimg"></a>
+                </nav>
+            </div>
+            <dvi class="textinfo">
+                <p align="center">EMAIL</p>
+                <p class="infoFooter">info@loviavto.com</p>
+            </dvi>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 ЛовиАвто. Все права защищены.</p>
+    </footer>
+</body>
+</html>

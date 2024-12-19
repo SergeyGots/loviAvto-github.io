@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛовиАвто</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/Layer 0 copy 1.png">
+    <style>
+         *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 10px 0;
+            padding: 0;
+            font-family: Inter;
+        }
+        .floating-button {
+            position: fixed; /* Фиксированное позиционирование */
+            bottom: 10px; /* Отступ от низа */
+            right: 10px; /* Отступ от правого края */
+            background-color: #68EBE9; /* Цвет кнопки */
+            color: black; /* Цвет текста */
+            padding: 10px 10px; /* Отступы внутри кнопки */
+            border: none; /* Убираем рамку */
+            border-radius: 5px; /* Закругленные углы */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+            cursor: pointer; /* Указатель при наведении */
+            transition: background-color 0.3s; /* Плавный переход цвета */
+            display: none; /* Скрываем кнопку по умолчанию */
+            font-family: Inter-black;
+        }
+        .floating-button:hover {
+            background-color: #00FFFB; /* Цвет кнопки при наведении */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class= "container" align="center">
+            <nav class="menu">
+                <a href="index.html" class="loviavto">ЛовиАвто</a>
+            </nav>
+            <nav class="number">
+                <p>+7(899)355-43-43</p>
+                <p>+7(899)355-43-43</p>
+            </nav>
+        </div>  
+    </header>
+    <main>
+        <hr>
+        <div calss="container">
+            <nav class="Text10">
+                <p class="block-glav10">О компании "ЛовиАвто"</p>
+                <p class="pinfo">"ЛовиАвто" предлагает пользователям возможность краткосрочной аренды автомобилей, что позволяет отказаться от необходимости владеть личным автомобилем, оплачивать страховку и обслуживание. Наши автомобили доступны 24/7, и их можно арендовать на время от нескольких минут до нескольких дней. Мы работаем в крупных городах, чтобы обеспечить максимальный комфорт и свободу передвижения для наших пользователей.</p>
+            </nav>
+            <nav class="Text10">
+                <p class="block-glav10">Наш автопарк</p>
+                <p class="pinfo">Мы предлагаем разнообразие моделей автомобилей, чтобы каждый клиент мог выбрать подходящий вариант. В автопарке "ЛовиАвто" представлены компактные машины для городских поездок, вместительные седаны и даже автомобили для более длительных поездок с семьей или друзьями.</p>
+            </nav>
+            <nav class="Text10">
+                <p class="block-glav10">Экологическая ответственность</p>
+                <p class="pinfo">"ЛовиАвто" заботится об окружающей среде и поддерживает экологичные технологии. В нашем автопарке можно найти гибридные и электрические автомобили, что позволяет нашим пользователям не только экономить, но и снижать выбросы углекислого газа.</p>
+            </nav>
+        </div>
+        <button class="floating-button" id="floatingBtn">Вверх</button>
+                <script>
+                    const floatingBtn = document.getElementById('floatingBtn');
+            
+                    // Отслеживаем прокрутку страницы
+                    window.onscroll = () => {
+                        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                            floatingBtn.style.display = "block"; // Показываем кнопку
+                        } else {
+                            floatingBtn.style.display = "none"; // Скрываем кнопку
+                        }
+                    };
+            
+                    // Добавляем обработчик события для прокрутки вверх
+                    floatingBtn.addEventListener('click', () => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth' // Плавная прокрутка
+                        });
+                    });
+                </script>
+        <div>
+            <p class="block-glav11">Наша миссия — сделать транспорт более доступным, удобным и экологически чистым. Мы верим, что будущее за каршерингом, и стремимся стать лучшим выбором для тех, кто ценит свободу передвижения без необходимости владеть автомобилем.</p>
+        </div>
+        <div>
+            <nav class="menu2">
+                <a href="index.html" class="loviavto3" id="textElement">НАЗАД</a>
+            </nav>
+        </div>
+        <script>
+            const textElement = document.getElementById('textElement');
+    
+            textElement.addEventListener('mouseenter', () => {
+                textElement.style.backgroundColor = '#00FFFB'; // Цвет фона при наведении
+            });
+    
+            textElement.addEventListener('mouseleave', () => {
+                textElement.style.backgroundColor = ''; // Сброс цвета фона
+            });
+        </script>
+        <div align="center">
+            <p class="block-glav3">ОСТАВАЙТЕСЬ НА СВЯЗИ</p>
+            <p class="text3">ПОДПИШИТЕСЬ НА НАШИ НОВОСТИ И ОБНОВЛЕНИЯ</p>
+        </div>
+    <hr>
+        <div class="containerInfo">
+            <div>
+                <p class="textinfo">СЛЕДИТЕ ЗА НАМИ В СОЦИАЛЬНЫХ СЕТЯХ</p>
+                <nav class="containerforimg">
+                    <a href="https://web.telegram.org/"><img src="img/telegram 2.png" class="mainimg"></a>
+                    <a href="https://vk.com/"><img src="img/vk 2.png" class="mainimg"></a>
+                    <a href="https://www.youtube.com/"><img src="img/youtube 2.png" class="mainimg"></a>
+                </nav>
+            </div>
+            <dvi class="textinfo">
+                <p align="center">EMAIL</p>
+                <p class="infoFooter">info@loviavto.com</p>
+            </dvi>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 ЛовиАвто. Все права защищены.</p>
+    </footer>
+</body>
+</html>
